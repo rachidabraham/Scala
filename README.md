@@ -1,5 +1,5 @@
 # Scala
-Getting starded with Scala :
+Getting started with Scala :
 - variables, 
 - operators, 
 - collections, 
