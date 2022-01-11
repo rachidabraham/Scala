@@ -43,5 +43,28 @@ object Days {
     // Afficher avec printl 'Les jours de la semaine sont Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi, Dimanche.'
     print("Les jours de la semaine sont :" )
     weekDayVals.foreach(e => print(" " + e))
+
+
+
+    /*
+    val weekDay =
+      Map(
+        1 -> "lundi", 2 -> "mardi", 3 -> "mercredi",
+        4 -> "jeudi", 5 -> "vendredi", 6->"samedi",
+        7 -> "dimanche")
+
+    val weekDayKeys = weekDay.keys
+
+    val weekDayKeys1 = weekDayKeys.toList
+    val weekDayKeys2 = weekDayKeys1.filter(ele => ele %2 == 0)
+
+    weekDay.foreach(m =>println("La clef "+m._1+" a pour valeur "+m._2))
+
+    val weekDayKeys1_sorted = weekDayKeys1.sorted
+    val jourDeLaSemaine = weekDayKeys1_sorted.map(key => weekDay(key))
+
+    println(s"Les jours de la semaine sont ${jourDeLaSemaine.mkString(", ")}")
+
+     */
   }
 }

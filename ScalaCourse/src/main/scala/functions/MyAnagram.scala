@@ -1,7 +1,5 @@
 package functions
 
-import scala.util.control.Breaks.break
-
 /**
  * Deux mots S1 et S2 sont anagrammes si toutes les lettres se trouvant dans S1 sont dans S2
  * et leurs tailles sont égales.
@@ -17,7 +15,7 @@ object MyAnagram {
   def main(args: Array[String]): Unit = {
 
     // Appeler la methode areAnagrams
-    val condition = areAnagrams("tata","ggg")
+    val condition = areAnagrams("admise","samedi")
 
     if (condition){
       println("OK : Les deux mots sont des anagrammes.")
@@ -27,6 +25,19 @@ object MyAnagram {
 
   // Definition de la methode areAnagrams
   def areAnagrams(S1: String, S2: String): Boolean = {
+
+    // On trie par ordre alphabétique et comparer
+    S1.sorted == S2.sorted // return true si la comparaison passe
+  }
+
+
+  /*
+  // Ou bien, de maniere plus détaillée
+
+  def areAnagrams(S1: String, S2: String): Boolean = {
+
+    // On trie par ordre alphabétique et comparer
+    S1.sorted == S2.sorted // return true si la comparaison passe
 
     var check = false // initialiser check à faux
 
@@ -45,7 +56,8 @@ object MyAnagram {
     check // ou return check
   }
 
-  /*
+  // Ou bien encore
+
   def areAnagrams(S1: String, S2: String): Boolean = {
 
     var check = false // initialiser check à faux

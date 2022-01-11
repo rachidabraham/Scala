@@ -21,6 +21,8 @@ object TupleExercise {
     // Renvoyer la phase suivante: Je suis prenom nom, j'ai une taille de taille et de sexe sexe
     println(s"Je suis ${moi._1} ${moi._2}, j'ai une taille" +
       s" de ${moi._3} et de sexe ${moi._4}")
+
+    println("Je suis %s %s, j'ai une taille de %s et de sexe %s".format(moi._1, moi._2, moi._3, moi._4))
   }
 
 }

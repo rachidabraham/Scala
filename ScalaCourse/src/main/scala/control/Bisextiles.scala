@@ -62,5 +62,16 @@ object Bisextiles {
         println(s"L'annee $annee n'est pas bisextile.")
       }
     }
+
+    /*
+    val a = (1900 to 2030).toList
+    var i = 0
+    while(i < a.length){
+      val year = a(i)
+      if ((year % 400 == 0) || (year % 100 != 0 && year % 4 == 0)) println(s"$year est bisextile")
+      i +=1
+    }
+
+     */
   }
 }

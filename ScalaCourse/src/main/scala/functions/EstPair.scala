@@ -54,4 +54,10 @@ object EstPair {
 
      */
   }
+
+
+  /*
+  // Ou bien de maniere plus simplifié
+  def eltPair(l: List[Int]) : Int = l.count(_ % 2 == 0)
+   */
 }

@@ -18,11 +18,18 @@ object Fibonacci {
 
     println("u0 = 0 \nu1 = 1")
 
-    for (i <-2 to 10){
+    for (i <-2 to 50){
       res = n0 + n1 // res = ui = u(i-1) + u(i-2) with n0 = u(i-1) and n1 = u(i-2)
       println(s"u$i = $res")
       n0 = n1
       n1 = res
     }
+
+    /*
+    // Ou bien en utilisant les listes
+    var (nombreLimitFibo, u) = (50, List(0, 1))
+    for( i <- 2 to nombreLimitFibo ) u = u :+ u(i-1) + u (i-2)
+
+     */
   }
 }

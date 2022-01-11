@@ -45,5 +45,17 @@ object Age {
     } else {
       println("Je suis un papi")
     }
+
+    /*
+    if (mon_age > 0 && mon_age <= 9)
+      println("je suis un enfant")
+    else if (mon_age >= 10 && mon_age <= 18)
+      println("je suis un adolescent")
+    else if (mon_age > 18 && mon_age <= 60)
+      println("je suis un adulte")
+    else
+      println("je suis un papi")
+
+     */
   }
 }

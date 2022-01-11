@@ -21,5 +21,11 @@ object NombrePremier {
     val modulusNum = sumNum%12
 
     println("Le reste de la division est : " + modulusNum)
+
+    /*
+    val nombre_premier=13
+    ((nombre_premier*nombre_premier) + 17) % 12 == 6 // revoie toujours true pour un nombre premier
+
+     */
   }
 }
