@@ -38,6 +38,11 @@ object EstPair {
 
   def eltPair(list: List[Int]): Unit = {
 
+    println(s"Le nombre d'elements pairs de la liste est : ${list.count(e => e%2 == 0)}")
+
+    /*
+    // Ou bien
+
     var number: Int = 0
 
     for (i <- list){
@@ -46,5 +51,7 @@ object EstPair {
     }
 
     println("Le nombre d'elements pairs de la liste est : " + number)
+
+     */
   }
 }

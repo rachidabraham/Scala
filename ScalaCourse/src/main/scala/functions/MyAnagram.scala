@@ -1,5 +1,7 @@
 package functions
 
+import scala.util.control.Breaks.break
+
 /**
  * Deux mots S1 et S2 sont anagrammes si toutes les lettres se trouvant dans S1 sont dans S2
  * et leurs tailles sont égales.
@@ -14,8 +16,8 @@ object MyAnagram {
 
   def main(args: Array[String]): Unit = {
 
-    // appeler la methode areAnagrams
-    val condition = areAnagrams("Admise","Samedi")
+    // Appeler la methode areAnagrams
+    val condition = areAnagrams("tata","ggg")
 
     if (condition){
       println("OK : Les deux mots sont des anagrammes.")
@@ -28,13 +30,53 @@ object MyAnagram {
 
     var check = false // initialiser check à faux
 
-    if (S1.length == S2.length) { // verifier avant tout si les deux mots ont la meme taille sinon on renvoie automatiquement faux
-      S1.foreach(ch => {
-        if (S2.contains(ch)) // parcourir chaque caractere d'un mot et le comparer à tous les autres caracteres de l'autre mot
-          check = true
+    // On trie par ordre alphabétique pour comparer les mots sequentiellement
+    val sortedS1 = S1.sorted
+    val sortedS2 = S2.sorted
+
+    if (sortedS1.length == sortedS2.length) {
+      sortedS1.foreach(_ => {
+        // contentEquals : compare le string au CharSequence spécifié. Le résultat est vrai si et seulement si
+        // ce string représente la même séquence de valeurs char que la séquence spécifiée.
+        check = sortedS2.contentEquals(sortedS1)
       })
     }
 
     check // ou return check
   }
+
+  /*
+  def areAnagrams(S1: String, S2: String): Boolean = {
+
+    var check = false // initialiser check à faux
+
+    if (S1.length == S2.length) { // verifier avant tout si les deux mots ont la meme taille sinon on renvoie automatiquement faux
+
+      var check1, check2 = true
+
+      S1.foreach(ch => {
+        if (check1) {
+          if (S2.contains(ch)) // parcourir chaque caractere d'un mot et le comparer à tous les autres caracteres de l'autre mot
+            check1 = true
+          else
+            check1 = false
+        }
+      })
+
+      S2.foreach(ch => {
+        if (check2) {
+          if (S1.contains(ch)) // parcourir chaque caractere d'un mot et le comparer à tous les autres caracteres de l'autre mot
+            check2 = true
+          else
+            check2 = false
+        }
+      })
+
+      check = check1 & check2
+    }
+
+    check // ou return check
+  }
+
+   */
 }
