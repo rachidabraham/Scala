@@ -1,0 +1,64 @@
+    import scala.io.Source
+
+
+
+    // lire les lignes du fichier product
+    val data = Source.fromFile("part-00000").getLines
+
+
+    // dans une variable data_only, enlever le header
+
+
+    // afficher les 5 premiers elements et assurer vous que le header n'est plus là
+
+
+    //convertir les lignes en Liste
+
+
+    // afficher les 100 premieres lignes
+
+
+    //combien de categories distinct le fichier contient
+    
+
+    // dans un tuple data_price_categ, mettre la categorie et le prix des element par categorie
+    // NB1 : Les prix doivent etre en double
+    // NB2 : Il peut y avoir que le prix soit vide (""), remplacer par 0.0
+    
+
+    /**
+     * En appliquant la methode group by, regrouper par categories, les prix de vente
+     * Cette fonction s'utilise comme suit : val data_grouped = data.groupBy(ligne => element_de_ligne_a_utiliser_pour_le_groupage)
+     * Vous utiliserez comme element de groupage les id de categories
+     * */
+
+
+    /**
+     * Afficher les 10 premieres lignes des données groupées
+     * */
+
+
+    /** La fonction group by renvoie pour chaque categorie, une liste de tuple (categorie, prix) associée
+     * creer une fonction sumList qui prend en entree une liste de tuple List[(String, Double)] et renvoie la somme des elements Double de la liste
+     * */
+    
+
+    /**
+     * Calculer les prix par categories en appliquant la fonction sumList
+     * */
+
+
+    // afficher les 10 premieres lignes
+
+
+    /**
+     * 
+     * Trier les categories par prix et par ordre croissant
+     */
+
+
+     /**
+     * Afficher les 5 categories qui ont été les plus vendues et leurs prix sous la forme
+     * 
+     * "la categorie CATEGORIE fait partie des 5 categories les plus vendues avec le prix PRIX
+     * */
